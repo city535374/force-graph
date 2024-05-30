@@ -6,7 +6,7 @@
     {"id": "Mme.Magloire", "group": 1},
     {"id": "CountessdeLo", "group": 1},
     {"id": "Geborand", "group": 1},
-    {"id": "Champtercier", "group": 1},
+    {"id": "Champtercier", "group": 1}
   ],
   "links": [
     {"source": "Napoleon", "target": "Myriel", "value": 1},
@@ -15,6 +15,6 @@
     {"source": "Mme.Magloire", "target": "Mlle.Baptistine", "value": 6},
     {"source": "CountessdeLo", "target": "Myriel", "value": 1},
     {"source": "Geborand", "target": "Myriel", "value": 1},
-    {"source": "Champtercier", "target": "Myriel", "value": 1},
+    {"source": "Champtercier", "target": "Myriel", "value": 1}
   ]
 }
