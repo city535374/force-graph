@@ -14,6 +14,7 @@
         .graphData(data)
         .nodeId('id')
         .nodeAutoColorBy('group')
+        .linkAutoColorBy(d => gData.nodes[d.source].group)
         .nodeCanvasObject((node, ctx, globalScale) => {
           const label = node.id ;
           const fontSize = 16/globalScale;
