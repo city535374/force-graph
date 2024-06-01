@@ -39,5 +39,7 @@
           bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
         });
     });
+        // fit to canvas when engine stops
+    Graph.onEngineStop(() => Graph.zoomToFit(400));
   </script>
 </body>
