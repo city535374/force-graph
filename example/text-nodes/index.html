@@ -15,6 +15,7 @@
         .nodeId('id')
         .nodeAutoColorBy('group')
         .linkAutoColorBy('group')
+        .cooldownTicks(100) //
         .nodeCanvasObject((node, ctx, globalScale) => {
           const label = node.id ;
           const fontSize = 16/globalScale;
