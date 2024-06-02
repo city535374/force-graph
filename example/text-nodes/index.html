@@ -13,8 +13,7 @@
       (document.getElementById('graph'))
         .graphData(data)
         .nodeId('id')
-        // .nodeAutoColorBy('group')
-        .linkAutoColorBy('group')
+        .nodeAutoColorBy('group')
         .cooldownTicks(100) //
         .nodeCanvasObject((node, ctx, globalScale) => {
           const label = node.id ;
