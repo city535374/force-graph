@@ -8,6 +8,8 @@
 <body>
   <div id="graph"></div>
   <script>
+     // gen a number persistent color from around the palette
+    const getColor = n => '#' + ((n * 1234567) % Math.pow(2, 24)).toString(16).padStart(6, '0');
     fetch('../datasets/test2.json').then(res => res.json()).then(data => {
       const Graph = ForceGraph()
       (document.getElementById('graph'))
@@ -44,7 +46,6 @@
     Graph.onEngineStop(() => Graph.zoomToFit(400));
     
     });
-    // gen a number persistent color from around the palette
-    const getColor = n => '#' + ((n * 1234567) % Math.pow(2, 24)).toString(16).padStart(6, '0');
+   
   </script>
 </body>
