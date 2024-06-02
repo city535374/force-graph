@@ -22,7 +22,7 @@
           const textWidth = ctx.measureText(label).width;
           const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
           ctx.nodeVal = 50;
-          ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+          ctx.fillStyle = getColor(node.id);  //'rgba(255, 255, 255, 0.8)';
           //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
           ctx.beginPath(); ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI, false); ctx.fill();
@@ -44,6 +44,7 @@
     Graph.onEngineStop(() => Graph.zoomToFit(400));
     
     });
-
+    // gen a number persistent color from around the palette
+    const getColor = n => '#' + ((n * 1234567) % Math.pow(2, 24)).toString(16).padStart(6, '0');
   </script>
 </body>
