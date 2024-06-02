@@ -13,7 +13,7 @@
       (document.getElementById('graph'))
         .graphData(data)
         .nodeId('id')
-        .nodeAutoColorBy('group')
+        // .nodeAutoColorBy('group')
         .linkAutoColorBy('group')
         .cooldownTicks(100) //
         .nodeCanvasObject((node, ctx, globalScale) => {
@@ -24,8 +24,8 @@
           const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
 
           ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-          ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
-
+          //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
+          ctx.beginPath(); ctx.arc(x, y, 5, 0, 2 * Math.PI, false);  // circle
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillStyle = node.color;
