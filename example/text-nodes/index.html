@@ -16,7 +16,7 @@
         .graphData(data)
         .nodeId('id')
         .nodeVal('val')
-        .nodeAutoColorBy('group')
+        // .nodeAutoColorBy('group')
         .cooldownTicks(100) //
         .linkSource('source')
         .linkTarget('target')
@@ -30,7 +30,9 @@
           ctx.fillStyle = getColor(node.id);  //'rgba(255, 255, 255, 0.8)';
           //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
-          ctx.beginPath(); ctx.arc(node.x, node.y,node.Val, 0, 2 * Math.PI, false); ctx.fill();
+          ctx.beginPath(); 
+          ctx.arc(node.x, node.y,node.Val, 0, 2 * Math.PI, true); 
+          ctx.fill();
           
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
