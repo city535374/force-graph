@@ -37,7 +37,7 @@
           //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
           ctx.beginPath(); 
-          ctx.arc(node.x, node.y,5, 0, 2 * Math.PI, false); 
+          ctx.arc(node.x, node.y,parseFloat(node.value), 0, 2 * Math.PI, false); 
           ctx.fill();
           
           ctx.textAlign = 'center';
