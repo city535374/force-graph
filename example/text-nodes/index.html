@@ -34,7 +34,7 @@
           const textWidth = ctx.measureText(label).width;
           const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
           ctx.nodeVal = 50;
-          ctx.fillStyle = getColor(Math.floor(Math.random() * 1000));  //'rgba(255, 255, 255, 0.8)';node.id
+          ctx.fillStyle = getColor(Math.floor(node.id));  //'rgba(255, 255, 255, 0.8)';Math.random() * 1000
           //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
           ctx.beginPath(); 
