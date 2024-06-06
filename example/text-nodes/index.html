@@ -34,7 +34,7 @@
           const textWidth = ctx.measureText(label).width;
           const bckgDimensions = [textWidth, fontSize].map(n => n + fontSize * 0.2); // some padding
           ctx.nodeVal = 50;
-          ctx.fillStyle = getColor(node.id);  //'rgba(255, 255, 255, 0.8)';//Math.floor(Math.random() * 1000)
+          ctx.fillStyle = getColor(node.id);  //'rgba(255, 255, 255, 0.8)';Math.floor(Math.random() * 1000)
           //ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
           ctx.beginPath(); 
@@ -49,7 +49,7 @@
           node.__bckgDimensions = bckgDimensions; // to re-use in nodePointerAreaPaint
         })
         .nodePointerAreaPaint((node, color, ctx) => {
-          //ctx.fillStyle = color;
+          ctx.fillStyle = color;
           const bckgDimensions = node.__bckgDimensions;
           bckgDimensions && ctx.fillRect(node.x - bckgDimensions[0] / 2, node.y - bckgDimensions[1] / 2, ...bckgDimensions);
 
